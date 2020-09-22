@@ -10,6 +10,7 @@ import UseForm from '../hooks/UseForm'
 const { width }= Dimensions.get('window')
 
 const ProductActivityScreen = () => {
+    navi
     const [state, setState] = useState(false)
     const menu = useRef();
     const onDismissSnackBar = () => setState(false);
@@ -56,16 +57,18 @@ const ProductActivityScreen = () => {
             />
             <View style={{ flex: 1, alignItems: 'flex-end', justifyContent: 'flex-end'}}  >
                 <Menu ref={ menu }>
-                    <MenuItem  onPress={hideMenu}>Agregar ruta</MenuItem>
+                    <MenuItem  onPress={hideMenu}>Agregar Ruta</MenuItem>
                     <MenuItem onPress={hideMenu}>Ventas</MenuItem>
-                    <MenuItem onPress={hideMenu}>Actualizar base de datos</MenuItem>
+                    <MenuItem onPress={hideMenu}>Actualizar Base de Datos</MenuItem>
                     <MenuDivider />
-                    <MenuItem onPress={hideMenu}>Cerrar sesión</MenuItem>
+                    <MenuItem onPress={()=> navi}>Clientes</MenuItem>
+                    <MenuDivider />
+                    <MenuItem onPress={hideMenu}>Cerrar Sección</MenuItem>
                 </Menu>
             </View>
             {
                 isVisibleModal &&(
-                    <ModalForm
+            <ModalForm
                 children = {false}
                 setIsVisible ={ setIsVisibleModal} 
                 isVisible= { isVisibleModal }

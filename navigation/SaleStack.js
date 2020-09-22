@@ -3,8 +3,6 @@ import React from 'react'
 import ProductActivityScreen from '../Screen/ProductActivityScreen'
 import { FontAwesome5 } from '@expo/vector-icons'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import { Button, Menu, Divider, Provider } from 'react-native-paper';
-
 const Stack= createStackNavigator()
 
 const SaleStack=()=>{

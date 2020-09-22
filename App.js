@@ -6,9 +6,9 @@ import Navigation from './navigation/Navigation';
 import { Provider } from 'react-redux';
 import {store,persistor} from './store/store';
 import { PersistGate } from 'redux-persist/integration/react';
+import { YellowBox } from 'react-native'
 
-
-
+YellowBox .ignoreWarnings(['Setting a timer']);
 const Stack=createStackNavigator()
 
 export default function App() {
