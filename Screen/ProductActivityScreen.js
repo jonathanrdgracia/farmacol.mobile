@@ -10,7 +10,6 @@ import UseForm from '../hooks/UseForm'
 const { width }= Dimensions.get('window')
 
 const ProductActivityScreen = () => {
-    navi
     const [state, setState] = useState(false)
     const menu = useRef();
     const onDismissSnackBar = () => setState(false);
@@ -61,7 +60,7 @@ const ProductActivityScreen = () => {
                     <MenuItem onPress={hideMenu}>Ventas</MenuItem>
                     <MenuItem onPress={hideMenu}>Actualizar Base de Datos</MenuItem>
                     <MenuDivider />
-                    <MenuItem onPress={()=> navi}>Clientes</MenuItem>
+                    <MenuItem onPress={()=> {}}>Clientes</MenuItem>
                     <MenuDivider />
                     <MenuItem onPress={hideMenu}>Cerrar Sección</MenuItem>
                 </Menu>

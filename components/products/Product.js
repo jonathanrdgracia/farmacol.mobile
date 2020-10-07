@@ -5,7 +5,11 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const product = ({ product }) => {
     const { id, name, images,price,count,description } = product
-    const image= images[0]
+    // const image = null;
+    // if(typeof(images[0]) == Array ){
+    //     image = images[0]
+    // }
+    
     return (
         <TouchableOpacity>
          <Divider style={{ backgroundColor: 'gray' }} />
@@ -25,7 +29,7 @@ const product = ({ product }) => {
                    <Text>Cantidad: {count}</Text>
                    <Text>RD${price}</Text>
                    <Text style={styles.productDescription} >
-                       {description.substr(0,60)}...
+                       {description?.substr(0,60)}...
                    </Text>
                </View>
            </View>
